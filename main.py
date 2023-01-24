@@ -42,7 +42,9 @@ def calculateStopsNecessary(consumable, speed, distance):
 
 def main():
     try:
-        distanceInMGLTs = int(input("How many mega lights do you want to run?\nEnter an integer: "))
+        # distanceInMGLTs = int(input("How many mega lights do you want to run?\nEnter an integer: "))
+        print("Running the app with 1.000.000 MGLTs!")
+        distanceInMGLTs = int(1000000)
         try:
             starships = getStarShipsAll()
             print(f'\n## Stop required for each starship ##\n')
