@@ -3,7 +3,8 @@ URL = 'https://swapi.dev/api'
 
 
 def getStarShipsAll():
-    req = requests.get(f'{URL}/starships').json()
+    req = requests.get(f'{URL}/starships')
+    req = req.json()
     isNext = True
     starships = []
     print("Calculating, wait!")
@@ -14,7 +15,8 @@ def getStarShipsAll():
         if req['next'] == None:
             isNext = False
         else:
-            req = requests.get(req['next']).json()
+            req = requests.get(req['next'])
+            req = req.json()
     
     return starships
 
