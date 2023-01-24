@@ -1,4 +1,5 @@
 import requests
+import sys
 
 def getStarShipsAll():
     url = "https://swapi.dev/api/starships"
@@ -40,11 +41,23 @@ def calculateStopsNecessary(consumable, speed, distance):
     return int(hoursNeeded / consumptionPerHour)
 
 
-def main():
+def error():
+    print("       ERRO\nUse the command with the following example:")
+    print("python main.py --distance=1000000")
+    sys.exit()
+
+
+def main(args):
     try:
-        # distanceInMGLTs = int(input("How many mega lights do you want to run?\nEnter an integer: "))
-        print("Running the app with 1.000.000 MGLTs!")
-        distanceInMGLTs = int(1000000)
+        text, num = str(args[0]).split('=')
+        distance = int(num)
+        if(text != '--distance'):
+            error()
+        elif(distance <= 0):
+            print('\nThe number must be greater than zero\n')
+            error()
+
+        print(f"\nRunning the app with {distance} MGLTs!")
         try:
             starships = getStarShipsAll()
             print(f'\n## Stop required for each starship ##\n')
@@ -55,14 +68,15 @@ def main():
                 if((consumable == 'unknown') or (speedMGLT == 'unknown')):
                     print(f"{name}: unknown")
                 else:
-                    print(f"{name}: {calculateStopsNecessary(consumable, speedMGLT, distanceInMGLTs)}")
+                    print(f"{name}: {calculateStopsNecessary(consumable, speedMGLT, distance)}")
 
         except Exception as e:
                 print(f"Error -> {e}")
+                error()
 
     except Exception as e:
-        print("The value entered is not an integer!")
+        error()
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
