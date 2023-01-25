@@ -20,7 +20,8 @@ def getStarShipsAll():
     return starships
 
 
-def extractHours(unity: str):
+def extractHours(unity):
+    unity = str(unity)
     hours: int = 1
     if (unity.startswith('year')):
         hours = 8760
