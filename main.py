@@ -22,7 +22,7 @@ def getStarShipsAll():
 
 def extractHours(unity):
     unity = str(unity)
-    hours: int = 1
+    hours = 1
     if (unity.startswith('year')):
         hours = 8760
     elif (unity.startswith('month')):
