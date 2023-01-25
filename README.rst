@@ -4,10 +4,6 @@
 .. image:: https://img.shields.io/pypi/pyversions/pastas
    :target: https://pypi.python.org/pypi/pastas
 
-<p align="center">
-<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
-</p>
-
 ## 📁 API DATA:
    - The app makes the request in the website api: "https://swapi.dev/api/starships"
 
