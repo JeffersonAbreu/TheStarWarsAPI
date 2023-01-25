@@ -61,18 +61,18 @@ def main(args):
         print("\nRunning the app with {} MGLTs!".format(distance))
         try:
             starships = getStarShipsAll()
-            print(f'\n## Stop required for each starship ##\n')
+            print('\n## Stop required for each starship ##\n')
             for starship in starships:
                 name = starship['name']
                 consumable = starship['consumables']
                 speedMGLT = starship['MGLT']
                 if((consumable == 'unknown') or (speedMGLT == 'unknown')):
-                    print(f"{name}: unknown")
+                    print("{}: unknown".format(name))
                 else:
-                    print(f"{name}: {calculateStopsNecessary(consumable, speedMGLT, distance)}")
+                    print("{}: {}".format(name, calculateStopsNecessary(consumable, speedMGLT, distance)))
 
         except Exception as e:
-                print(f"Error -> {e}")
+                print("Error -> {}".format(e))
                 error()
 
     except Exception as e:
