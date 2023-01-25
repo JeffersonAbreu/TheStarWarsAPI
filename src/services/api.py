@@ -4,7 +4,7 @@ import requests
 class Api:
 
     @staticmethod
-    def getStarShipsAll() -> list[StarShip]:
+    def getStarShipsAll():
         url:str = "https://swapi.dev/api/starships"
         req: list[str] = []
         req = requests.get(url, timeout = 10).json()
