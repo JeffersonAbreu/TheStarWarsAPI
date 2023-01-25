@@ -1,0 +1,11 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+
+# production
+src/model/__pycache__
+src/services/__pycache__
+src/utils/__pycache__
+
+# note
+docs/note.txt
