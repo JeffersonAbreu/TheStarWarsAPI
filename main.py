@@ -58,7 +58,7 @@ def main(args):
             print('\nThe number must be greater than zero\n')
             error()
 
-        print(f"\nRunning the app with {distance} MGLTs!")
+        print("\nRunning the app with {} MGLTs!".format(distance))
         try:
             starships = getStarShipsAll()
             print(f'\n## Stop required for each starship ##\n')
