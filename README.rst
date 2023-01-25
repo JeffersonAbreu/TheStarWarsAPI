@@ -9,14 +9,14 @@
 
 
 ## ✔️ FUNCTIONALITY:
-   - `Calculate` : Calculate how many stops will be needed to travel a given distance,
+   - `Calculate` : Calculate how many stops will be needed to travel a given distance,<br>
      with each of the spacecraft listed by the SW API
 
 
 ## ✔️ RUN:
-- Open terminal in project/src folder
-- Run the following command to use the app: ``python3 main.py --distance=1000000``
-- Where the number at the end is the MGLT unit("Mega Litghts")
+- Open terminal in project/src folder<br>
+- Run the following command to use the app: ``python3 main.py --distance=1000000``<br>
+- Where the number at the end is the MGLT unit("Mega Litghts")<br>
 - The answer will be <starship name> : <stops>
 
 
